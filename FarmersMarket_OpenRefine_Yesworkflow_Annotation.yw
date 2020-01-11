@@ -1,0 +1,140 @@
+# @begin FarmersMarketOpenRefineWorkFlow @desc Display OpenRefine Data Cleaning Steps
+
+
+# @in RawCSVfile @uri file:/FinalProject/farmersmarkets_07152019.csv
+# @out CleanedCSVfile @uri file:/FinalProject/US-Farmers-Market-DataSet-Cleaned-OpenRefine
+
+
+    # @begin step1_core/text-transform @desc Text Transform - Trim leading and trailing white spaces for columns cols_set1
+    # @in data @as RawCSVfile @uri file:/FinalProject/farmersmarkets_07152019.csv
+    # @param cols_set1:MarketName,Website,Facebook,Twitter,Youtube,OtherMedia,Street,City
+    # @param expression:value.trim()
+    # @out data @as intermediate_dataset1
+    # @end step1_core/text-transform
+
+    # @begin step2_core/text-transform @desc Text Transform - Collapse consecutive white spaces for columns cols_set2
+    # @in data @as intermediate_dataset1
+    # @param cols_set2:MarketName,Website,Facebook,Twitter,Youtube,OtherMedia,Street,City
+    # @param expression:value.replace(/\\s+/,' ')
+    # @out data @as intermediate_dataset2
+    # @end step2_core/text-transform
+
+    # @begin step3_core/text-transform @desc Text transform - Convert to Numeric for columns cols_set3
+    # @in data @as intermediate_dataset2
+    # @param cols_set3:FMID,x,y
+    # @param expression:value.toNumber()
+    # @out data @as intermediate_dataset3
+    # @end step3_core/text-transform
+
+
+    # @begin step4_core/text-transform @desc Text transform - Convert to Titlecase for columns cols_set4
+    # @in data @as intermediate_dataset3
+    # @param cols_set4:MarketName,County,City
+    # @param expression:value.toTitlecase()
+    # @out data @as intermediate_dataset4
+    # @end step4_core/text-transform
+
+    # @begin step5_core/column-removal @desc Column-removal - Remove columns in cols_set5
+    # @in data @as intermediate_dataset4
+    # @param cols_set5:Season3Date,Season3Time,Season4Date,Season4Time
+    # @out data @as intermediate_dataset5
+    # @end step5_core/column-removal
+
+    # @begin step6_core/mass-edit @desc Mass Edit - Mass Edit cells in  cols_set6 to consolidate city names based on CLUSTERING
+    # @in data @as intermediate_dataset5
+    # @param cols_set6:City
+    # @out data @as intermediate_dataset6
+    # @end step6_core/mass-edit
+
+    # @begin step7_core/column-addition @desc column-addition - Create column CityName at index 9 based on column city using GREL expression
+    # @in data @as intermediate_dataset6
+    # @param cols_set7:City
+    # @param expression:grel:(value.split(\',')[0]).split(\'/\')[0]
+    # @out data @as intermediate_dataset7
+    # @end step7_core/column-addition
+
+    # @begin step8_core/text-transform @desc Text Transform - to remove the word 'county' from the column County(cols_set8)
+    # @in data @as intermediate_dataset7
+    # @param cols_set8:County
+    # @param expression:value.replace(\'County\,\'\')
+    # @out data @as intermediate_dataset8
+    # @end step8_core/text-transform
+
+    # @begin step9_core/text-transform @desc Text Transform - to fill in default values to missing product type fields (cols_set9)using GREL expression
+    # @in data @as intermediate_dataset8
+    # @param cols_set9:All_30_consecutive_product_columns_from_Organic_to_WildHarvested
+    # @param expression:grel:if(value==null,\'NA\',value)
+    # @out data @as intermediate_dataset9
+    # @end step9_core/text-transform
+
+    # @begin step10_core/text-transform @desc Text Transform - Collapse consecutive white spaces for column updateTime
+    # @in data @as intermediate_dataset9
+    # @param cols_set10:updateTime
+    # @param expression:value.replace(/\\s+/,' ')
+    # @out data @as intermediate_dataset10
+    # @end step10_core/text-transform
+
+    # @begin step11_core/column-addition @desc column-addition - Create column YearLastUpdated at index 56 based on column updateTime using GREL expression
+    # @in data @as intermediate_dataset10
+    # @param cols_set11:updateTime
+    # @param expression:grel:toString(toDate(value.replace(\'12:\',\'00:\')),\'yyyy\')
+    # @out data @as intermediate_dataset11
+    # @end step11_core/column-addition
+
+    # @begin step12_core/text-transform @desc Text Transform - to add a boolean indicator to all product type fields to show presence or absence of each  product type using GREL expression
+    # @in data @as intermediate_dataset11
+    # @param cols_set12:All_30_consecutive_product_columns_from_Organic_to_WildHarvested
+    # @param expression:grel:if(value=='Y',1,0)
+    # @out data @as intermediate_dataset12
+    # @end step12_core/text-transform
+
+    # @begin step13_core/column-addition @desc column-addition - Create column TotalProductTypesSold at index 26 based on counts of Organic+other 29 products per row using GREL expression
+    # @in data @as intermediate_dataset12
+    # @param cols_set13:All_30_consecutive_product_columns_from_Organic_to_WildHarvested
+    # @param expression:grel:value+cells['Bakedgoods'].value+cells['Cheese'].value+.......+cells['WildHarvested'].value
+    # @out data @as intermediate_dataset13
+    # @end step13_core/column-addition
+
+    # @begin step14_core/text-transform @desc Text Transform - to add a boolean indicator to all payment type fields to show presence or absence of support for each  payment type in col_set14 using GREL expression
+    # @in data @as intermediate_dataset13
+    # @param cols_set14:Credit,WIC,WICcash,SFMNP,SNAP
+    # @param expression:grel:if(value=='Y',1,0)
+    # @out data @as intermediate_dataset14
+    # @end step14_core/text-transform
+
+    # @begin step15_core/column-addition @desc column-addition - Create column TotalPymtTypesAccptd at index 21 based on counts of Credit+other 4 payment types per row using GREL expression
+    # @in data @as intermediate_dataset14
+    # @param cols_set15:Credit,WIC,WICcash,SFMNP,SNAP
+    # @param expression:grel:value+cells['WIC'].value+\ncells['WICcash'].value+\ncells['SFMNP'].value+\ncells['SNAP'].value
+    # @out data @as intermediate_dataset15
+    # @end step15_core/column-addition
+
+    # @begin step16_core/column-addition @desc column-addition - Create column IsCandidate as the final indicator at index 57 based on multiple fields in cols_set16 to conclude the analysis using GREL expression
+    # @in data @as intermediate_dataset15
+    # @param cols_set16:YearLastUpdated,TotalProductTypesSold,TotalPymtTypesAccptd,Website
+    # @param expression:grel:if(and(value=='2019',cells['TotalProductTypesSold'].value >= 12,cells['TotalPymtTypesAccptd'].value >= 3,cells['Website'].value == null),1,0)
+    # @out data @as intermediate_dataset16
+    # @end step16_core/column-addition
+
+    # @begin step17_core/text-transform @desc Text Transform - Updated all zip codes that do not have the 4 digit suffix by adding a default suffix of 0000, to standardize the format using GREL expression
+    # @in data @as intermediate_dataset16
+    # @param cols_set17:zip
+    # @param expression:grel:if(contains(value,\'-\')='True',value,value+'-0000')
+    # @out data @as intermediate_dataset17
+    # @end step17_core/text-transform
+
+    # @begin step18_core/text-transform @desc Text Transform - Updated all zip codes that do not have the 5 digit prefix by defaulting to 00000-0000 to standardize the format using GREL expression
+    # @in data @as intermediate_dataset17
+    # @param cols_set18:zip
+    # @param expression:grel:if(value.length()==10,value,'00000-0000')
+    # @out data @as intermediate_dataset18
+    # @end step18_core/text-transform
+
+    # @begin step19_core/text-transform @desc Text Transform - Updated all null zip codes to 00000-0000 to standardize the format using GREL expression
+    # @in data @as intermediate_dataset18
+    # @param cols_set19:zip
+    # @param expression:grel:if(value==null,'00000-0000',value)
+    # @out CleanedCSVfile @uri file:/FinalProject/US-Farmers-Market-DataSet-Cleaned-OpenRefine
+    # @end step19_core/text-transform
+
+# @end FarmersMarketOpenRefineWorkFlow

@@ -1,0 +1,166 @@
+
+/* Start of top-level graph */
+digraph Workflow {
+rankdir=TB
+
+/* Title for graph */
+fontname=Helvetica; fontsize=18; labelloc=t
+label=FarmersMarketOpenRefineWorkFlow
+
+/* Start of double cluster for drawing box around nodes in workflow */
+subgraph cluster_workflow_box_outer { label=""; color=black; penwidth=2
+subgraph cluster_workflow_box_inner { label=""; penwidth=0
+
+/* Style for nodes representing atomic programs in workflow */
+node[shape=box style=filled fillcolor="#CCFFCC" peripheries=1 fontname=Helvetica]
+
+/* Nodes representing atomic programs in workflow */
+"step1_core/text-transform" [shape=record rankdir=LR label="{<f0> step1_core/text-transform |<f1> Text Transform - Trim leading and trailing white spaces for columns cols_set1}"];
+"step2_core/text-transform" [shape=record rankdir=LR label="{<f0> step2_core/text-transform |<f1> Text Transform - Collapse consecutive white spaces for columns cols_set2}"];
+"step3_core/text-transform" [shape=record rankdir=LR label="{<f0> step3_core/text-transform |<f1> Text transform - Convert to Numeric for columns cols_set3}"];
+"step4_core/text-transform" [shape=record rankdir=LR label="{<f0> step4_core/text-transform |<f1> Text transform - Convert to Titlecase for columns cols_set4}"];
+"step5_core/column-removal" [shape=record rankdir=LR label="{<f0> step5_core/column-removal |<f1> Column-removal - Remove columns in cols_set5}"];
+"step6_core/mass-edit" [shape=record rankdir=LR label="{<f0> step6_core/mass-edit |<f1> Mass Edit - Mass Edit cells in cols_set6 to consolidate city names based on CLUSTERING}"];
+"step7_core/column-addition" [shape=record rankdir=LR label="{<f0> step7_core/column-addition |<f1> column-addition - Create column CityName at index 9 based on column city using GREL expression}"];
+"step8_core/text-transform" [shape=record rankdir=LR label="{<f0> step8_core/text-transform |<f1> Text Transform - to remove the word 'county' from the column County(cols_set8)}"];
+"step9_core/text-transform" [shape=record rankdir=LR label="{<f0> step9_core/text-transform |<f1> Text Transform - to fill in default values to missing product type fields (cols_set9)using GREL expression}"];
+"step10_core/text-transform" [shape=record rankdir=LR label="{<f0> step10_core/text-transform |<f1> Text Transform - Collapse consecutive white spaces for column updateTime}"];
+"step11_core/column-addition" [shape=record rankdir=LR label="{<f0> step11_core/column-addition |<f1> column-addition - Create column YearLastUpdated at index 56 based on column updateTime using GREL expression}"];
+"step12_core/text-transform" [shape=record rankdir=LR label="{<f0> step12_core/text-transform |<f1> Text Transform - to add a boolean indicator to all product type fields to show presence or absence of each product type using GREL expression}"];
+"step13_core/column-addition" [shape=record rankdir=LR label="{<f0> step13_core/column-addition |<f1> column-addition - Create column TotalProductTypesSold at index 26 based on counts of Organic+other 29 products per row using GREL expression}"];
+"step14_core/text-transform" [shape=record rankdir=LR label="{<f0> step14_core/text-transform |<f1> Text Transform - to add a boolean indicator to all payment type fields to show presence or absence of support for each payment type in col_set14 using GREL expression}"];
+"step15_core/column-addition" [shape=record rankdir=LR label="{<f0> step15_core/column-addition |<f1> column-addition - Create column TotalPymtTypesAccptd at index 21 based on counts of Credit+other 4 payment types per row using GREL expression}"];
+"step16_core/column-addition" [shape=record rankdir=LR label="{<f0> step16_core/column-addition |<f1> column-addition - Create column IsCandidate as the final indicator at index 57 based on multiple fields in cols_set16 to conclude the analysis using GREL expression}"];
+"step17_core/text-transform" [shape=record rankdir=LR label="{<f0> step17_core/text-transform |<f1> Text Transform - Updated all zip codes that do not have the 4 digit suffix by adding a default suffix of 0000, to standardize the format using GREL expression}"];
+"step18_core/text-transform" [shape=record rankdir=LR label="{<f0> step18_core/text-transform |<f1> Text Transform - Updated all zip codes that do not have the 5 digit prefix by defaulting to 00000-0000 to standardize the format using GREL expression}"];
+"step19_core/text-transform" [shape=record rankdir=LR label="{<f0> step19_core/text-transform |<f1> Text Transform - Updated all null zip codes to 00000-0000 to standardize the format using GREL expression}"];
+
+/* Style for nodes representing non-parameter data channels in workflow */
+node[shape=box style="rounded,filled" fillcolor="#FFFFCC" peripheries=1 fontname=Helvetica]
+
+/* Nodes for non-parameter data channels in workflow */
+CleanedCSVfile [shape=record rankdir=LR label="{<f0> CleanedCSVfile |<f1> file\:/FinalProject/US-Farmers-Market-DataSet-Cleaned-OpenRefine}"];
+RawCSVfile [shape=record rankdir=LR label="{<f0> RawCSVfile |<f1> file\:/FinalProject/farmersmarkets_07152019.csv}"];
+intermediate_dataset1
+intermediate_dataset2
+intermediate_dataset3
+intermediate_dataset4
+intermediate_dataset5
+intermediate_dataset6
+intermediate_dataset7
+intermediate_dataset8
+intermediate_dataset9
+intermediate_dataset10
+intermediate_dataset11
+intermediate_dataset12
+intermediate_dataset13
+intermediate_dataset14
+intermediate_dataset15
+intermediate_dataset16
+intermediate_dataset17
+intermediate_dataset18
+
+/* Style for nodes representing parameter channels in workflow */
+node[shape=box style="rounded,filled" fillcolor="#FCFCFC" peripheries=1 fontname=Helvetica]
+
+/* Nodes representing parameter channels in workflow */
+
+/* Edges representing connections between programs and channels */
+"step1_core/text-transform" -> intermediate_dataset1
+RawCSVfile -> "step1_core/text-transform"
+"cols_set1:MarketName,Website,Facebook,Twitter,Youtube,OtherMedia,Street,City" -> "step1_core/text-transform"
+"expression:value.trim()" -> "step1_core/text-transform"
+"step2_core/text-transform" -> intermediate_dataset2
+intermediate_dataset1 -> "step2_core/text-transform"
+"cols_set2:MarketName,Website,Facebook,Twitter,Youtube,OtherMedia,Street,City" -> "step2_core/text-transform"
+"expression:value.replace(/\\s+/,'" -> "step2_core/text-transform"
+"step3_core/text-transform" -> intermediate_dataset3
+intermediate_dataset2 -> "step3_core/text-transform"
+"cols_set3:FMID,x,y" -> "step3_core/text-transform"
+"expression:value.toNumber()" -> "step3_core/text-transform"
+"step4_core/text-transform" -> intermediate_dataset4
+intermediate_dataset3 -> "step4_core/text-transform"
+"cols_set4:MarketName,County,City" -> "step4_core/text-transform"
+"expression:value.toTitlecase()" -> "step4_core/text-transform"
+"step5_core/column-removal" -> intermediate_dataset5
+intermediate_dataset4 -> "step5_core/column-removal"
+"cols_set5:Season3Date,Season3Time,Season4Date,Season4Time" -> "step5_core/column-removal"
+"step6_core/mass-edit" -> intermediate_dataset6
+intermediate_dataset5 -> "step6_core/mass-edit"
+"cols_set6:City" -> "step6_core/mass-edit"
+"step7_core/column-addition" -> intermediate_dataset7
+intermediate_dataset6 -> "step7_core/column-addition"
+"cols_set7:City" -> "step7_core/column-addition"
+"expression:grel:(value.split(\',')[0]).split(\'/\')[0]" -> "step7_core/column-addition"
+"step8_core/text-transform" -> intermediate_dataset8
+intermediate_dataset7 -> "step8_core/text-transform"
+"cols_set8:County" -> "step8_core/text-transform"
+"expression:value.replace(\'County\,\'\')" -> "step8_core/text-transform"
+"step9_core/text-transform" -> intermediate_dataset9
+intermediate_dataset8 -> "step9_core/text-transform"
+"cols_set9:All_30_consecutive_product_columns_from_Organic_to_WildHarvested" -> "step9_core/text-transform"
+"expression:grel:if(value==null,\'NA\',value)" -> "step9_core/text-transform"
+"step10_core/text-transform" -> intermediate_dataset10
+intermediate_dataset9 -> "step10_core/text-transform"
+"cols_set10:updateTime" -> "step10_core/text-transform"
+"expression:value.replace(/\\s+/,'" -> "step10_core/text-transform"
+"step11_core/column-addition" -> intermediate_dataset11
+intermediate_dataset10 -> "step11_core/column-addition"
+"cols_set11:updateTime" -> "step11_core/column-addition"
+"expression:grel:toString(toDate(value.replace(\'12:\',\'00:\')),\'yyyy\')" -> "step11_core/column-addition"
+"step12_core/text-transform" -> intermediate_dataset12
+intermediate_dataset11 -> "step12_core/text-transform"
+"cols_set12:All_30_consecutive_product_columns_from_Organic_to_WildHarvested" -> "step12_core/text-transform"
+"expression:grel:if(value=='Y',1,0)" -> "step12_core/text-transform"
+"step13_core/column-addition" -> intermediate_dataset13
+intermediate_dataset12 -> "step13_core/column-addition"
+"cols_set13:All_30_consecutive_product_columns_from_Organic_to_WildHarvested" -> "step13_core/column-addition"
+"expression:grel:value+cells['Bakedgoods'].value+cells['Cheese'].value+.......+cells['WildHarvested'].value" -> "step13_core/column-addition"
+"step14_core/text-transform" -> intermediate_dataset14
+intermediate_dataset13 -> "step14_core/text-transform"
+"cols_set14:Credit,WIC,WICcash,SFMNP,SNAP" -> "step14_core/text-transform"
+"expression:grel:if(value=='Y',1,0)" -> "step14_core/text-transform"
+"step15_core/column-addition" -> intermediate_dataset15
+intermediate_dataset14 -> "step15_core/column-addition"
+"cols_set15:Credit,WIC,WICcash,SFMNP,SNAP" -> "step15_core/column-addition"
+"expression:grel:value+cells['WIC'].value+\ncells['WICcash'].value+\ncells['SFMNP'].value+\ncells['SNAP'].value" -> "step15_core/column-addition"
+"step16_core/column-addition" -> intermediate_dataset16
+intermediate_dataset15 -> "step16_core/column-addition"
+"cols_set16:YearLastUpdated,TotalProductTypesSold,TotalPymtTypesAccptd,Website" -> "step16_core/column-addition"
+"expression:grel:if(and(value=='2019',cells['TotalProductTypesSold'].value" -> "step16_core/column-addition"
+"step17_core/text-transform" -> intermediate_dataset17
+intermediate_dataset16 -> "step17_core/text-transform"
+"cols_set17:zip" -> "step17_core/text-transform"
+"expression:grel:if(contains(value,\'-\')='True',value,value+'-0000')" -> "step17_core/text-transform"
+"step18_core/text-transform" -> intermediate_dataset18
+intermediate_dataset17 -> "step18_core/text-transform"
+"cols_set18:zip" -> "step18_core/text-transform"
+"expression:grel:if(value.length()==10,value,'00000-0000')" -> "step18_core/text-transform"
+"step19_core/text-transform" -> CleanedCSVfile
+intermediate_dataset18 -> "step19_core/text-transform"
+"cols_set19:zip" -> "step19_core/text-transform"
+"expression:grel:if(value==null,'00000-0000',value)" -> "step19_core/text-transform"
+
+/* End of double cluster for drawing box around nodes in workflow */
+}}
+
+/* Style for nodes representing workflow input ports */
+node[shape=circle style="rounded,filled" fillcolor="#FFFFFF" peripheries=1 fontname=Helvetica width=0.2]
+
+/* Nodes representing workflow input ports */
+RawCSVfile_input_port [label=""]
+
+/* Style for nodes representing workflow output ports */
+node[shape=circle style="rounded,filled" fillcolor="#FFFFFF" peripheries=1 fontname=Helvetica width=0.2]
+
+/* Nodes representing workflow output ports */
+CleanedCSVfile_output_port [label=""]
+
+/* Edges from input ports to channels */
+RawCSVfile_input_port -> RawCSVfile
+
+/* Edges from channels to output ports */
+CleanedCSVfile -> CleanedCSVfile_output_port
+
+/* End of top-level graph */
+}

@@ -1,0 +1,1491 @@
+[
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column MarketName using expression value.trim()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "MarketName",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column MarketName using expression value.replace(/\\s+/,' ')",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "MarketName",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Website using expression value.trim()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Website",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Website using expression value.replace(/\\s+/,' ')",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Website",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Facebook using expression value.trim()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facebook",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Facebook using expression value.replace(/\\s+/,' ')",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facebook",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Twitter using expression value.trim()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Twitter",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Twitter using expression value.replace(/\\s+/,' ')",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Twitter",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Youtube using expression value.trim()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Youtube",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Youtube using expression value.replace(/\\s+/,' ')",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Youtube",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column OtherMedia using expression value.trim()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "OtherMedia",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column OtherMedia using expression value.replace(/\\s+/,' ')",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "OtherMedia",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column street using expression value.trim()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "street",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column street using expression value.replace(/\\s+/,' ')",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "street",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column city using expression value.trim()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "city",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column city using expression value.replace(/\\s+/,' ')",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "city",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column County using expression value.trim()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "County",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column FMID using expression value.toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "FMID",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column x using expression value.toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "x",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column y using expression value.toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "y",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column MarketName using expression value.toTitlecase()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "MarketName",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Season3Date",
+    "columnName": "Season3Date"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Season3Time",
+    "columnName": "Season3Time"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Season4Date",
+    "columnName": "Season4Date"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Season4Time",
+    "columnName": "Season4Time"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column County using expression value.toTitlecase()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "County",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column city using expression value.toTitlecase()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "city",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column city",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "city",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Land O Lakes",
+          "Land O' Lakes"
+        ],
+        "to": "Land O' Lakes"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Wheeling",
+          "Wheeling,"
+        ],
+        "to": "Wheeling"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Indianapolis",
+          "Indianapolis,"
+        ],
+        "to": "Indianapolis"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Greenwood",
+          "Greenwood Greenwood"
+        ],
+        "to": "Greenwood"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Mt Airy",
+          "Mt. Airy"
+        ],
+        "to": "Mt. Airy"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "St Anthony",
+          "St. Anthony"
+        ],
+        "to": "St. Anthony"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Wayne",
+          "Wayne,"
+        ],
+        "to": "Wayne"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column city",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "city",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "St. Louis",
+          "St Louis"
+        ],
+        "to": "St. Louis"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "St Augustine",
+          "St. Augustine"
+        ],
+        "to": "St Augustine"
+      }
+    ]
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column CityName at index 9 based on column city using expression grel:(value.split(\",\")[0] ).split(\"/\")[0]",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "CityName",
+    "columnInsertIndex": 9,
+    "baseColumnName": "city",
+    "expression": "grel:(value.split(\",\")[0] ).split(\"/\")[0]",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column County using expression value.replace(/\\bcounty\\b/,\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "County",
+    "expression": "value.replace(/\\bcounty\\b/,\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column County using expression value.replace(\"County\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "County",
+    "expression": "value.replace(\"County\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Organic",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Organic",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "-"
+        ],
+        "to": "NA"
+      }
+    ]
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Bakedgoods using expression grel:if(value==null, \"NA\", value)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Bakedgoods",
+    "expression": "grel:if(value==null, \"NA\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Cheese using expression grel:if(value==null, \"NA\", value)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cheese",
+    "expression": "grel:if(value==null, \"NA\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Crafts using expression grel:if(value==null, \"NA\", value)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Crafts",
+    "expression": "grel:if(value==null, \"NA\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Flowers using expression grel:if(value==null, \"NA\", value)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Flowers",
+    "expression": "grel:if(value==null, \"NA\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Eggs using expression grel:if(value==null, \"NA\", value)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Eggs",
+    "expression": "grel:if(value==null, \"NA\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Seafood using expression grel:if(value==null, \"NA\", value)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Seafood",
+    "expression": "grel:if(value==null, \"NA\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Herbs using expression grel:if(value==null, \"NA\", value)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Herbs",
+    "expression": "grel:if(value==null, \"NA\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Vegetables using expression grel:if(value==null, \"NA\", value)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Vegetables",
+    "expression": "grel:if(value==null, \"NA\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Honey using expression grel:if(value==null, \"NA\", value)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Honey",
+    "expression": "grel:if(value==null, \"NA\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Jams using expression grel:if(value==null, \"NA\", value)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Jams",
+    "expression": "grel:if(value==null, \"NA\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Maple using expression grel:if(value==null, \"NA\", value)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Maple",
+    "expression": "grel:if(value==null, \"NA\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Meat using expression grel:if(value==null, \"NA\", value)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Meat",
+    "expression": "grel:if(value==null, \"NA\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Nursery using expression grel:if(value==null, \"NA\", value)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Nursery",
+    "expression": "grel:if(value==null, \"NA\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Nuts using expression grel:if(value==null, \"NA\", value)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Nuts",
+    "expression": "grel:if(value==null, \"NA\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Plants using expression grel:if(value==null, \"NA\", value)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Plants",
+    "expression": "grel:if(value==null, \"NA\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Poultry using expression grel:if(value==null, \"NA\", value)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Poultry",
+    "expression": "grel:if(value==null, \"NA\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Prepared using expression grel:if(value==null, \"NA\", value)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Prepared",
+    "expression": "grel:if(value==null, \"NA\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Soap using expression grel:if(value==null, \"NA\", value)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Soap",
+    "expression": "grel:if(value==null, \"NA\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Trees using expression grel:if(value==null, \"NA\", value)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Trees",
+    "expression": "grel:if(value==null, \"NA\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Wine using expression grel:if(value==null, \"NA\", value)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Wine",
+    "expression": "grel:if(value==null, \"NA\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Coffee using expression grel:if(value==null, \"NA\", value)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Coffee",
+    "expression": "grel:if(value==null, \"NA\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Beans using expression grel:if(value==null, \"NA\", value)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Beans",
+    "expression": "grel:if(value==null, \"NA\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Fruits using expression grel:if(value==null, \"NA\", value)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Fruits",
+    "expression": "grel:if(value==null, \"NA\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Grains using expression grel:if(value==null, \"NA\", value)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Grains",
+    "expression": "grel:if(value==null, \"NA\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Juices using expression grel:if(value==null, \"NA\", value)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Juices",
+    "expression": "grel:if(value==null, \"NA\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Mushrooms using expression grel:if(value==null, \"NA\", value)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Mushrooms",
+    "expression": "grel:if(value==null, \"NA\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column PetFood using expression grel:if(value==null, \"NA\", value)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "PetFood",
+    "expression": "grel:if(value==null, \"NA\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Tofu using expression grel:if(value==null, \"NA\", value)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Tofu",
+    "expression": "grel:if(value==null, \"NA\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column WildHarvested using expression grel:if(value==null, \"NA\", value)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "WildHarvested",
+    "expression": "grel:if(value==null, \"NA\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column updateTime using expression value.replace(/\\s+/,' ')",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "updateTime",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column YearLastUpdated at index 56 based on column updateTime using expression grel:toString(toDate(value.replace(\" 12:\",\" 00:\")),\"yyyy\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "YearLastUpdated",
+    "columnInsertIndex": 56,
+    "baseColumnName": "updateTime",
+    "expression": "grel:toString(toDate(value.replace(\" 12:\",\" 00:\")),\"yyyy\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Organic using expression grel:if(value=='Y',1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Organic",
+    "expression": "grel:if(value=='Y',1,0)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Bakedgoods using expression grel:if(value=='Y',1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Bakedgoods",
+    "expression": "grel:if(value=='Y',1,0)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Cheese using expression grel:if(value=='Y',1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cheese",
+    "expression": "grel:if(value=='Y',1,0)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Crafts using expression grel:if(value=='Y',1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Crafts",
+    "expression": "grel:if(value=='Y',1,0)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Crafts using expression grel:if(value=='Y',1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Crafts",
+    "expression": "grel:if(value=='Y',1,0)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Flowers using expression grel:if(value=='Y',1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Flowers",
+    "expression": "grel:if(value=='Y',1,0)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Flowers using expression grel:if(value=='Y',1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Flowers",
+    "expression": "grel:if(value=='Y',1,0)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Eggs using expression grel:if(value=='Y',1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Eggs",
+    "expression": "grel:if(value=='Y',1,0)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Seafood using expression grel:if(value=='Y',1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Seafood",
+    "expression": "grel:if(value=='Y',1,0)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Herbs using expression grel:if(value=='Y',1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Herbs",
+    "expression": "grel:if(value=='Y',1,0)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Vegetables using expression grel:if(value=='Y',1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Vegetables",
+    "expression": "grel:if(value=='Y',1,0)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Honey using expression grel:if(value=='Y',1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Honey",
+    "expression": "grel:if(value=='Y',1,0)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Jams using expression grel:if(value=='Y',1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Jams",
+    "expression": "grel:if(value=='Y',1,0)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Maple using expression grel:if(value=='Y',1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Maple",
+    "expression": "grel:if(value=='Y',1,0)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Meat using expression grel:if(value=='Y',1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Meat",
+    "expression": "grel:if(value=='Y',1,0)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Nursery using expression grel:if(value=='Y',1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Nursery",
+    "expression": "grel:if(value=='Y',1,0)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Nuts using expression grel:if(value=='Y',1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Nuts",
+    "expression": "grel:if(value=='Y',1,0)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Plants using expression grel:if(value=='Y',1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Plants",
+    "expression": "grel:if(value=='Y',1,0)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Poultry using expression grel:if(value=='Y',1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Poultry",
+    "expression": "grel:if(value=='Y',1,0)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Prepared using expression grel:if(value=='Y',1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Prepared",
+    "expression": "grel:if(value=='Y',1,0)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Soap using expression grel:if(value=='Y',1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Soap",
+    "expression": "grel:if(value=='Y',1,0)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Trees using expression grel:if(value=='Y',1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Trees",
+    "expression": "grel:if(value=='Y',1,0)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Wine using expression grel:if(value=='Y',1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Wine",
+    "expression": "grel:if(value=='Y',1,0)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Coffee using expression grel:if(value=='Y',1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Coffee",
+    "expression": "grel:if(value=='Y',1,0)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Beans using expression grel:if(value=='Y',1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Beans",
+    "expression": "grel:if(value=='Y',1,0)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Fruits using expression grel:if(value=='Y',1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Fruits",
+    "expression": "grel:if(value=='Y',1,0)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Grains using expression grel:if(value=='Y',1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Grains",
+    "expression": "grel:if(value=='Y',1,0)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Grains using expression grel:if(value=='Y',1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Grains",
+    "expression": "grel:if(value=='Y',1,0)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Juices using expression grel:if(value=='Y',1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Juices",
+    "expression": "grel:if(value=='Y',1,0)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Mushrooms using expression grel:if(value=='Y',1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Mushrooms",
+    "expression": "grel:if(value=='Y',1,0)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column PetFood using expression grel:if(value=='Y',1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "PetFood",
+    "expression": "grel:if(value=='Y',1,0)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Tofu using expression grel:if(value=='Y',1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Tofu",
+    "expression": "grel:if(value=='Y',1,0)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column WildHarvested using expression grel:if(value=='Y',1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "WildHarvested",
+    "expression": "grel:if(value=='Y',1,0)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column TotalProductTypesSold at index 26 based on column Organic using expression grel:value + cells['Bakedgoods'].value+ \ncells['Cheese'].value+\ncells['Crafts'].value+\ncells['Flowers'].value+\ncells['Eggs'].value+\ncells['Seafood'].value+\ncells['Herbs'].value+\ncells['Vegetables'].value+\ncells['Honey'].value+\ncells['Jams'].value+\ncells['Maple'].value+\ncells['Meat'].value+\ncells['Nursery'].value+\ncells['Nuts'].value+\ncells['Plants'].value+\ncells['Poultry'].value+\ncells['Prepared'].value+\ncells['Soap'].value+\ncells['Trees'].value+cells['Wine'].value+\ncells['Coffee'].value+\ncells['Beans'].value+\ncells['Fruits'].value+\ncells['Grains'].value+cells['Juices'].value+\ncells['Mushrooms'].value+\ncells['PetFood'].value+\ncells['Tofu'].value+\ncells['WildHarvested'].value",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "TotalProductTypesSold",
+    "columnInsertIndex": 26,
+    "baseColumnName": "Organic",
+    "expression": "grel:value + cells['Bakedgoods'].value+ \ncells['Cheese'].value+\ncells['Crafts'].value+\ncells['Flowers'].value+\ncells['Eggs'].value+\ncells['Seafood'].value+\ncells['Herbs'].value+\ncells['Vegetables'].value+\ncells['Honey'].value+\ncells['Jams'].value+\ncells['Maple'].value+\ncells['Meat'].value+\ncells['Nursery'].value+\ncells['Nuts'].value+\ncells['Plants'].value+\ncells['Poultry'].value+\ncells['Prepared'].value+\ncells['Soap'].value+\ncells['Trees'].value+cells['Wine'].value+\ncells['Coffee'].value+\ncells['Beans'].value+\ncells['Fruits'].value+\ncells['Grains'].value+cells['Juices'].value+\ncells['Mushrooms'].value+\ncells['PetFood'].value+\ncells['Tofu'].value+\ncells['WildHarvested'].value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-move",
+    "description": "Move column TotalProductTypesSold to position 57",
+    "columnName": "TotalProductTypesSold",
+    "index": 57
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Credit using expression grel:if ( value == 'Y',1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Credit",
+    "expression": "grel:if ( value == 'Y',1,0)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column WIC using expression grel:if ( value == 'Y',1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "WIC",
+    "expression": "grel:if ( value == 'Y',1,0)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column WICcash using expression grel:if ( value == 'Y',1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "WICcash",
+    "expression": "grel:if ( value == 'Y',1,0)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column SFMNP using expression grel:if ( value == 'Y',1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SFMNP",
+    "expression": "grel:if ( value == 'Y',1,0)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column SNAP using expression grel:if ( value == 'Y',1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SNAP",
+    "expression": "grel:if ( value == 'Y',1,0)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column SNAP using expression grel:if ( value == 'Y',1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SNAP",
+    "expression": "grel:if ( value == 'Y',1,0)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column TotalPymtTypesAccptd at index 21 based on column Credit using expression grel:value + cells['WIC'].value+\ncells['WICcash'].value+\ncells['SFMNP'].value+\ncells['SNAP'].value",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "TotalPymtTypesAccptd",
+    "columnInsertIndex": 21,
+    "baseColumnName": "Credit",
+    "expression": "grel:value + cells['WIC'].value+\ncells['WICcash'].value+\ncells['SFMNP'].value+\ncells['SNAP'].value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-move",
+    "description": "Move column TotalPymtTypesAccptd to position 58",
+    "columnName": "TotalPymtTypesAccptd",
+    "index": 58
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column IsCandidate at index 57 based on column YearLastUpdated using expression grel:if (and(value == '2019', cells['TotalProductTypesSold'].value >= 12, cells['TotalPymtTypesAccptd'].value >= 3, cells['Website'].value == null),1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "IsCandidate",
+    "columnInsertIndex": 57,
+    "baseColumnName": "YearLastUpdated",
+    "expression": "grel:if (and(value == '2019', cells['TotalProductTypesSold'].value >= 12, cells['TotalPymtTypesAccptd'].value >= 3, cells['Website'].value == null),1,0)",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-move",
+    "description": "Move column IsCandidate to position 59",
+    "columnName": "IsCandidate",
+    "index": 59
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column zip using expression grel:if( contains(value, \"-\") = 'True',value,value+'-0000')",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "zip",
+    "expression": "grel:if( contains(value, \"-\") = 'True',value,value+'-0000')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column zip using expression grel:if( value.length() == 10, value, '00000-0000')",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "zip",
+    "expression": "grel:if( value.length() == 10, value, '00000-0000')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column zip using expression grel:if(value==null,'00000-0000',value)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "zip",
+    "expression": "grel:if(value==null,'00000-0000',value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  }
+]
